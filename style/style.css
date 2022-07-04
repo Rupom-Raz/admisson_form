@@ -1,0 +1,119 @@
+/* Variables */
+:root {
+    --body: rgb(222, 236, 253);
+    --form: #ffffff;
+    --dark: #999999;
+    --black: #333333;
+    --red: #ff105f;
+    --yellow: #ffad06;
+    --semiDark: #777777;
+    --font-main: "Poppins", sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+}
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+}
+
+section {
+    background-color: var(--body) !important;
+}
+.box {
+    width: 360px;
+    height: 400px;
+    margin: 8% auto;
+    background: var(--form);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.heading {
+    text-align: center;
+    font-weight: var(--font-weight-semibold);
+}
+.sub_heading {
+    text-align: center;
+    font-weight: var(--font-weight-regular);
+}
+.box form {
+    width: 280px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    transition: 0.5s;
+}
+form input {
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px 0;
+    border: 0;
+    border-bottom: 1px solid var(--dark);
+    outline: none;
+    background: transparent;
+}
+::placeholder {
+    color: var(--semiDark);
+}
+
+.btn-box {
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+form button {
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    color: var(--form);
+}
+#form2 {
+    left: 450px;
+}
+#form3 {
+    left: 450px;
+}
+#form4 {
+    left: 450px;
+}
+.step-row {
+    width: 360px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px var(--black);
+    position: relative;
+}
+.step-col {
+    width: 120px;
+    text-align: center;
+    color: var(--black);
+    position: relative;
+}
+#progress {
+    position: absolute;
+    height: 100%;
+    width: 90px;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+}
+#progress::after {
+    content: "";
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-left: 20px solid var(--yellow);
+}
