@@ -18,256 +18,470 @@
     <section>
         <div class="container-fluid">
 
-                <h2 class="heading my-2">Application form for admisson</h2>
-                <p class="sub_heading">Undergraduate program</p>
+            <h2 class="heading py-2">Application form for admisson</h2>
+            <p class="sub_heading">Undergraduate program</p>
 
-                <div class="container ">
-                    <div class="row">
-                        <!-- Form ---------- 1 ------------>
+            <div class="container ">
+                <div class="row">
+                    <!-- Form ---------- 1 ------------>
 
-                        <form id="form1">
-                            <div class="row  px-5  mt-3">
-                                <div class="form-group col-sm-6 col-md-3  flex-column"> <label
-                                        class="form-control-label ">Application Type<span class="text-danger">
-                                            *</span></label> <select class="form-select">
-                                        <option value="">Local Student(Bangladeshi)</option>
-                                        <option value="">International Student</option>
-                                    </select> </div>
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
-                                        class="form-control-label ">Full name<span class="text-danger">
-                                            *</span></label> <input type="text" id="lname" name="lname"
-                                        placeholder="Enter your full name"> </div>
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
-                                        class="form-control-label ">Program</label> <select class="form-select">
-                                        <option class="" value="">BBA</option>
-                                        <option value="">CSE</option>
-                                        <option value="">LAW</option>
-                                        <option value="">EEE</option>
-                                    </select> </div>
+                    <form id="form1">
+                        <div class="row  px-5  mt-3">
+                            <div class="form-group col-sm-6 col-md-3  flex-column"> <label
+                                    class="form-control-label ">Application Type<span class="text-danger">
+                                        *</span></label> <select class="form-select">
+                                    <option value="">Local Student(Bangladeshi)</option>
+                                    <option value="">International Student</option>
+                                </select> </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Full name<span class="text-danger">
+                                        *</span></label> <input type="text" id="lname" name="lname"
+                                    placeholder="Enter your full name"> </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Program</label> <select class="form-select">
+                                    <option class="" value="">BBA</option>
+                                    <option value="">CSE</option>
+                                    <option value="">LAW</option>
+                                    <option value="">EEE</option>
+                                </select> </div>
 
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
-                                        class="form-control-label ">Gender<span class="text-danger">
-                                            *</span></label> <select class="form-select">
-                                        <option class="" value="">Male</option>
-                                        <option value="">Female</option>
-                                    </select> </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Gender<span class="text-danger">
+                                        *</span></label> <select class="form-select">
+                                    <option class="" value="">Male</option>
+                                    <option value="">Female</option>
+                                </select> </div>
 
-                            </div>
-                            <div class="row  px-5  mt-3">
-                                <div class="form-group col-sm-6 col-md-3  flex-column"> <label
-                                        class="form-control-label ">Religion<span class="text-danger">
-                                            *</span></label> <select class="form-select">
-                                        <option value="">Muslim</option>
-                                        <option value="">Hindu</option>
-                                    </select> </div>
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"><label
-                                        class="form-control-label ">Nationality<span class="text-danger">
-                                            *</span></label> <select class="form-select">
-                                        <option value="">Bangladeshi</option>
-                                        <option value="">Indian</option>
-                                        <option value="">Nepali</option>
-                                    </select> </div>
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
-                                        class="form-control-label ">Date of Birth<span class="text-danger">
-                                            *</span></label>
-                                    <div id="date-picker-example"
-                                        class=" date_picker input-group   md-form md-outline input-with-post-icon datepicker"
-                                        inline="true">
-                                        <input placeholder="Select date" type="date" id="example">
-                                    </div>
-
-                                </div>
-
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
-                                        class="form-control-label ">Birth Certificate</label>
-                                    <input type="text" id="lname" name="lname" placeholder="Birth certificate">
-
+                        </div>
+                        <div class="row  px-5  mt-3">
+                            <div class="form-group col-sm-6 col-md-3  flex-column"> <label
+                                    class="form-control-label ">Religion<span class="text-danger">
+                                        *</span></label> <select class="form-select">
+                                    <option value="">Muslim</option>
+                                    <option value="">Hindu</option>
+                                </select> </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"><label
+                                    class="form-control-label ">Nationality<span class="text-danger">
+                                        *</span></label> <select class="form-select">
+                                    <option value="">Bangladeshi</option>
+                                    <option value="">Indian</option>
+                                    <option value="">Nepali</option>
+                                </select> </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Date of Birth<span class="text-danger">
+                                        *</span></label>
+                                <div id="date-picker-example"
+                                    class=" date_picker input-group   md-form md-outline input-with-post-icon datepicker"
+                                    inline="true">
+                                    <input placeholder="Select date" type="date" id="example">
                                 </div>
 
                             </div>
-                            <div class="row  px-5  mt-3">
-                                <div class="form-group col-sm-6 col-md-3  flex-column"> <label
-                                        class="form-control-label ">National ID</label>
-                                    <input type="text" id="" name="" placeholder="National ID">
-                                </div>
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"><label
-                                        class="form-control-label ">Passport NO</label>
-                                    <input type="text" id="" name="" placeholder="Passport NO">
-                                </div>
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
-                                        class="form-control-label ">Blood Group</label>
-                                    <select class="form-select">
-                                        <option value="">Select blood group</option>
-                                        <option value="">A+</option>
-                                        <option value="">AB-</option>
-                                    </select>
 
-
-                                </div>
-
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
-                                        class="form-control-label ">Tribal</label>
-                                    <select class="form-select">
-                                        <option value="">Select Tribal</option>
-                                        <option value="">Chakma</option>
-                                        <option value="">Monipuri</option>
-                                    </select>
-                                </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Birth Certificate</label>
+                                <input type="text" id="lname" name="lname" placeholder="Birth certificate">
 
                             </div>
-                            <div class="row  px-5  mt-3">
-                                <div class="form-group col-sm-6 col-md-3  flex-column"> <label
-                                        class="form-control-label ">Photo<span class="text-danger">
-                                            *</span></label>
-                                    <input type="file" id="" name="">
-                                </div>
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"><label
-                                        class="form-control-label ">Transfort Route</label>
-                                    <select class="form-select">
-                                        <option value="">Select Route</option>
-                                        <option value="">Bypass</option>
-                                        <option value="">Surma Tower</option>
-                                    </select>
 
-                                </div>
+                        </div>
+                        <div class="row  px-5  mt-3">
+                            <div class="form-group col-sm-6 col-md-3  flex-column"> <label
+                                    class="form-control-label ">National ID</label>
+                                <input type="text" id="" name="" placeholder="National ID">
+                            </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"><label
+                                    class="form-control-label ">Passport NO</label>
+                                <input type="text" id="" name="" placeholder="Passport NO">
+                            </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Blood Group</label>
+                                <select class="form-select">
+                                    <option value="">Select blood group</option>
+                                    <option value="">A+</option>
+                                    <option value="">AB-</option>
+                                </select>
+
 
                             </div>
-                            <div class="btn-box">
-                                <button id="next1" type="button">Next</button>
+
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Tribal</label>
+                                <select class="form-select">
+                                    <option value="">Select Tribal</option>
+                                    <option value="">Chakma</option>
+                                    <option value="">Monipuri</option>
+                                </select>
                             </div>
 
-                        </form>
-
-
-                        <!-- Form ------- 2 ----------- -->
-                        <form id="form2">
-                            <div class="row  px-5  mt-3">
-                                <div class="form-group col-sm-6 col-md-3  flex-column"> <label
-                                        class="form-control-label ">Application Type<span class="text-danger">
-                                            *</span></label> <select class="form-select">
-                                        <option value="">Local Student(Bangladeshi)</option>
-                                        <option value="">International Student</option>
-                                    </select> </div>
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
-                                        class="form-control-label ">Full name<span class="text-danger">
-                                            *</span></label> <input type="text" id="lname" name="lname"
-                                        placeholder="Enter your full name"> </div>
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
-                                        class="form-control-label ">Program</label> <select class="form-select">
-                                        <option class="" value="">BBA</option>
-                                        <option value="">CSE</option>
-                                        <option value="">LAW</option>
-                                        <option value="">EEE</option>
-                                    </select> </div>
-
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
-                                        class="form-control-label ">Gender<span class="text-danger">
-                                            *</span></label> <select class="form-select">
-                                        <option class="" value="">Male</option>
-                                        <option value="">Female</option>
-                                    </select> </div>
+                        </div>
+                        <div class="row  px-5  mt-3">
+                            <div class="form-group col-sm-6 col-md-3  flex-column"> <label
+                                    class="form-control-label ">Photo<span class="text-danger">
+                                        *</span></label>
+                                <input type="file" id="" name="">
+                            </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"><label
+                                    class="form-control-label ">Transfort Route</label>
+                                <select class="form-select">
+                                    <option value="">Select Route</option>
+                                    <option value="">Bypass</option>
+                                    <option value="">Surma Tower</option>
+                                </select>
 
                             </div>
-                            <div class="row  px-5  mt-3">
-                                <div class="form-group col-sm-6 col-md-3  flex-column"> <label
-                                        class="form-control-label ">Religion<span class="text-danger">
-                                            *</span></label> <select class="form-select">
-                                        <option value="">Muslim</option>
-                                        <option value="">Hindu</option>
-                                    </select> </div>
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"><label
-                                        class="form-control-label ">Nationality<span class="text-danger">
-                                            *</span></label> <select class="form-select">
-                                        <option value="">Bangladeshi</option>
-                                        <option value="">Indian</option>
-                                        <option value="">Nepali</option>
-                                    </select> </div>
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
-                                        class="form-control-label ">Date of Birth<span class="text-danger">
-                                            *</span></label>
-                                    <div id="date-picker-example"
-                                        class=" date_picker input-group   md-form md-outline input-with-post-icon datepicker"
-                                        inline="true">
-                                        <input placeholder="Select date" type="date" id="example">
-                                    </div>
 
-                                </div>
+                        </div>
+                        <div class="btn-box">
+                            <button id="next1" type="button">Next</button>
+                        </div>
 
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
-                                        class="form-control-label ">Birth Certificate</label>
-                                    <input type="text" id="lname" name="lname" placeholder="Birth certificate">
-
-                                </div>
-
-                            </div>
-                            <div class="row  px-5  mt-3">
-                                <div class="form-group col-sm-6 col-md-3  flex-column"> <label
-                                        class="form-control-label ">National ID</label>
-                                    <input type="text" id="" name="" placeholder="National ID">
-                                </div>
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"><label
-                                        class="form-control-label ">Passport NO</label>
-                                    <input type="text" id="" name="" placeholder="Passport NO">
-                                </div>
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
-                                        class="form-control-label ">Blood Group</label>
-                                    <select class="form-select">
-                                        <option value="">Select blood group</option>
-                                        <option value="">A+</option>
-                                        <option value="">AB-</option>
-                                    </select>
+                    </form>
 
 
-                                </div>
+                    <!-- Form ------- 2 ----------- -->
+                    <form id="form2">
+                        <div class="row  px-5  mt-3">
+                            <div class="form-group col-sm-6 col-md-3  flex-column"> <label
+                                    class="form-control-label ">Father Name<span class="text-danger">
+                                        *</span></label> <input type="text" id="lname" name="lname"
+                                    placeholder="Father Name"> </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Father Occupation<span class="text-danger">
+                                        *</span></label> <input type="text" id="lname" name="lname"
+                                    placeholder="Father Occupation"> </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Father National ID</label> <input type="text" id="lname"
+                                    name="lname" placeholder="Father National ID"> </div>
 
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
-                                        class="form-control-label ">Tribal</label>
-                                    <select class="form-select">
-                                        <option value="">Select Tribal</option>
-                                        <option value="">Chakma</option>
-                                        <option value="">Monipuri</option>
-                                    </select>
-                                </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Mother Name<span class="text-danger">
+                                        *</span></label> <input type="text" id="lname" name="lname"
+                                    placeholder="Mother Name"> </div>
 
-                            </div>
-                            <div class="row  px-5  mt-3">
-                                <div class="form-group col-sm-6 col-md-3  flex-column"> <label
-                                        class="form-control-label ">Photo<span class="text-danger">
-                                            *</span></label>
-                                    <input type="file" id="" name="">
-                                </div>
-                                <div class="form-group col-sm-6 col-md-3 flex-column d-flex"><label
-                                        class="form-control-label ">Transfort Route</label>
-                                    <select class="form-select">
-                                        <option value="">Select Route</option>
-                                        <option value="">Bypass</option>
-                                        <option value="">Surma Tower</option>
-                                    </select>
+                        </div>
+                        <div class="row  px-5  mt-3">
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Mother Occupation<span class="text-danger">
+                                        *</span></label> <input type="text" id="lname" name="lname"
+                                    placeholder="Mother Occupation"> </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Mother National ID</label> <input type="text" id="lname"
+                                    name="lname" placeholder="Mother National ID"> </div>
 
-                                </div>
-
-                            </div>
-                            <div class="btn-box">
-                                <button id="back1" type="button">Back</button>
-                                <button id="next2" type="button">Next</button>
+                            <div class="form-group col-sm-6 col-md-3  flex-column"> <label
+                                    class="form-control-label ">Guardian Photo<span class="text-danger">
+                                        *</span></label>
+                                <input type="file" id="" name="">
                             </div>
 
-                        </form>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Local Guardian Name<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" id="lname" name="lname" placeholder="Local Guardian Name">
+
+                            </div>
+
+                        </div>
+                        <div class="row  px-5  mt-3">
+                            <div class="form-group col-sm-6 col-md-3  flex-column"> <label
+                                    class="form-control-label ">Local Guardian Address<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" id="" name="" placeholder="National ID">
+                            </div>
 
 
 
 
 
+                        </div>
 
-                        <div class="step-row">
-                            <div id="progress"></div>
-                            <div class="step-col"><small>Step 1</small></div>
-                            <div class="step-col"><small>Step 2</small></div>
-                            <div class="step-col"><small>Step 3</small></div>
-                            <div class="step-col"><small>Step 4</small></div>
+                        <div class="btn-box">
+                            <button id="back1" type="button">Back</button>
+                            <button id="next2" type="button">Next</button>
+                        </div>
+
+                    </form>
+
+                    <!-- Form ----------3----------- -->
+                    <form id="form3">
+                        <div class="row  px-5  mt-3">
+                            <div class="form-group col-sm-6 col-md-3  flex-column"> <label
+                                    class="form-control-label ">Email<span class="text-danger">
+                                        *</span></label> <input type="email" id="" name=""
+                                    placeholder="Enter Your Email"> </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Mobile<span class="text-danger">
+                                        *</span></label> <input type="number" id="" name=""
+                                    placeholder="Enter Your Mobile Number"> </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Guardian Mobile NO<span class="text-danger">
+                                        *</span></label> <input type="number" id="" name="" placeholder="Guardian NO">
+                            </div>
+
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Local Guardian NO<span class="text-danger">
+                                        *</span></label> <input type="number" id="" name=""
+                                    placeholder="Local Guardian NO">
+                            </div>
+
+                        </div>
+                        <div class="row  px-5  mt-3">
+                            <h5 class="text-center ">Present Address<span class="text-danger">
+                                    *</span></h5>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Division</label> <select id="pre_Division"
+                                    class="form-select">
+                                    <option value="">Select Division</option>
+                                    <option value="Dhaka">Dhaka</option>
+                                    <option value="Chittagong">Chittagong</option>
+                                    <option value="Sylhet">Sylhet</option>
+                                </select> </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">District<span class="text-danger">
+                                        *</span></label> <select id="pre_District" class="form-select">
+                                    <option value="">Select District</option>
+                                    <option value="Narayngong">Narayngong</option>
+                                    <option value="Cumilla">Cumilla</option>
+                                    <option value="Moulovibazar">Moulovibazar</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">City<span class="text-danger">
+                                        *</span></label> <select id="pre_City" class="form-select">
+                                    <option value="Select City">Select City</option>
+                                    <option value="Sylhet Sadar">Sylhet Sadar</option>
+                                    <option value="Cumilla city">Cumilla city</option>
+                                    <option value="Dhaka city">Dhaka city</option>
+                                </select>
+                            </div>
+
+
+
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Postal Code<span class="text-danger">
+                                        *</span></label>
+                                <input type="number" id="pre_Postal" name="" placeholder="Postal Code">
+                            </div>
+
+                        </div>
+                        <div class="row  px-5  mt-3">
+                            <h5 class="text-center ">Permanent Address<span class="text-danger">*</span></h5>
+                            <div class="mb-3 form-check">
+                                <input onclick="FillAddressInput()" type="checkbox" class="form-check-input"
+                                    id="filladdress" name="filladdress">
+                                <label class="form-check-label" for="exampleCheck1">Same as Present Address</label>
+                            </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Division</label> <select id="par_Division"
+                                    class="form-select">
+                                    <option value="">Select Division</option>
+                                    <option value="Dhaka">Dhaka</option>
+                                    <option value="Chittagong">Chittagong</option>
+                                    <option value="Sylhet">Sylhet</option>
+                                </select> </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">District<span class="text-danger">
+                                        *</span></label> <select id="par_District" class="form-select">
+                                    <option value="">Select District</option>
+                                    <option value="Narayngong">Narayngong</option>
+                                    <option value="Cumilla">Cumilla</option>
+                                    <option value="Moulovibazar">Moulovibazar</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">City<span class="text-danger">
+                                        *</span></label> <select id="par_City" class="form-select">
+                                    <option value="">Select City</option>
+                                    <option value="Sylhet Sadar<">Sylhet Sadar</option>
+                                    <option value="Cumilla city">Cumilla city</option>
+                                    <option value="Dhaka city">Dhaka city</option>
+                                </select>
+                            </div>
+
+
+
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Postal Code<span class="text-danger">
+                                        *</span></label>
+                                <input type="number" id="par_Postal" name="" placeholder="Postal Code">
+                            </div>
+
+                        </div>
+
+                        <div class="btn-box">
+                            <button id="back2" type="button">Back</button>
+                            <button id="next3" type="button">Next</button>
+                        </div>
+
+                    </form>
+
+                    <!-- Form --------4 --------------- -->
+                    <form id="form4">
+                        <div class="row  px-5  mt-3">
+                            <h5 class="text-center ">Secondary School/Equivalent Information</h5>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Exam<span class="text-danger">
+                                        *</span></label> <select class="form-select">
+                                    <option value="">Select Exam</option>
+                                    <option value="">SSC</option>
+                                    <option value="">Dakhil</option>
+
+                                </select> </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Year<span class="text-danger">
+                                        *</span></label> <select id="" class="form-select">
+                                    <option value="">Select Year</option>
+                                    <option value="">2010</option>
+                                    <option value="">2011</option>
+                                    <option value="">2012</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Board<span class="text-danger">
+                                        *</span></label> <select id="" class="form-select">
+                                    <option value="">Select Board</option>
+                                    <option value="">Dhaka</option>
+                                    <option value="">Cumilla</option>
+                                    <option value="">Sylhet</option>
+                                </select>
+                            </div>
+
+
+
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Instituation Name<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" id="" name="" placeholder="Enter Instituation Name">
+                            </div>
+
+                        </div>
+                        <div class="row  px-5  mt-3">
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Group<span class="text-danger">
+                                        *</span></label>
+                                <select id="" class="form-select">
+                                    <option value="">Select Group</option>
+                                    <option value="<">Science</option>
+                                    <option value="">Commerce</option>
+                                    <option value="">Arts</option>
+                                </select>
+
+
+                            </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Roll NO<span class="text-danger">
+                                        *</span></label>
+                                <input type="number" id="" name="" placeholder="Enter Roll NO">
+
+                            </div>
+
+
+
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Registration NO<span class="text-danger">
+                                        *</span></label>
+                                <input type="number" id="" name="" placeholder="Enter Registration NO">
+                            </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">GPA<span class="text-danger">
+                                        *</span></label>
+                                <input type="number" id="" name="" placeholder="Enter GPA">
+                            </div>
+
+                        </div>
+                        <div class="row  px-5  mt-3">
+                            <h5 class="text-center">Higher Secondary/Equivalent Information</h5>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Exam<span class="text-danger">
+                                        *</span></label> <select class="form-select">
+                                    <option value="">Select Exam</option>
+                                    <option value="">SSC</option>
+                                    <option value="">Dakhil</option>
+
+                                </select> </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Year<span class="text-danger">
+                                        *</span></label> <select id="" class="form-select">
+                                    <option value="">Select Year</option>
+                                    <option value="">2010</option>
+                                    <option value="">2011</option>
+                                    <option value="">2012</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Board<span class="text-danger">
+                                        *</span></label> <select id="" class="form-select">
+                                    <option value="">Select Board</option>
+                                    <option value="">Dhaka</option>
+                                    <option value="">Cumilla</option>
+                                    <option value="">Sylhet</option>
+                                </select>
+                            </div>
+
+
+
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Instituation Name<span class="text-danger">
+                                        *</span></label>
+                                <input type="text" id="" name="" placeholder="Enter Instituation Name">
+                            </div>
+
+                        </div>
+                        <div class="row  px-5  mt-3">
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Group<span class="text-danger">
+                                        *</span></label>
+                                <select id="" class="form-select">
+                                    <option value="">Select Group</option>
+                                    <option value="<">Science</option>
+                                    <option value="">Commerce</option>
+                                    <option value="">Arts</option>
+                                </select>
+
+
+                            </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Roll NO<span class="text-danger">
+                                        *</span></label>
+                                <input type="number" id="" name="" placeholder="Enter Roll NO">
+
+                            </div>
+
+
+
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">Registration NO<span class="text-danger">
+                                        *</span></label>
+                                <input type="number" id="" name="" placeholder="Enter Registration NO">
+                            </div>
+                            <div class="form-group col-sm-6 col-md-3 flex-column d-flex"> <label
+                                    class="form-control-label ">GPA<span class="text-danger">
+                                        *</span></label>
+                                <input type="number" id="" name="" placeholder="Enter GPA">
+                            </div>
+
+                        </div>
+
+                        <div class="btn-box">
+                            <button id="back3" type="button">Back</button>
+                            <button id="submit" type="button">Submit</button>
+                        </div>
+
+                    </form>
+
+                    <div class="step-row">
+                        <div id="progress"></div>
+                        <div id="step1" class="step-col"><span class="step-counter ">1</span><small>Personal Information</small>
+                        </div>
+                        <div id="step2"  class="step-col"><span class="step-counter ">2</span><small>Guardian Information</small>
+                        </div>
+                        <div id="step3"  class="step-col"><span class="step-counter ">3</span><small>Contact</small></div>
+                        <div id="step4"  class="step-col"><span class="step-counter ">4</span><small>Academic Qualification</small>
                         </div>
                     </div>
                 </div>
+            </div>
 
 
 
