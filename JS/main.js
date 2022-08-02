@@ -16,6 +16,46 @@ var step2 = document.getElementById("step2");
 var step3 = document.getElementById("step3");
 var step4 = document.getElementById("step4");
 
+Form1.addEventListener("submit", (e) => {
+    e.preventDefault();
+    var names = document.getElementById("name").value;
+    var program = document.getElementById("program").value;
+    var applicationType = document.getElementById("selectField").value;
+    var Gender = document.getElementById("gender").value;
+    var religion = document.getElementById("religion").value;
+    var nationality = document.getElementById("nationality").value;
+    var dob = document.getElementById("dob").value;
+    var bloodGroup = document.getElementById("bloodGroup").value;
+    var birth_cert = document.getElementById("birth_cert").value;
+    var photo = document.getElementById("photo").value;
+    var nation_ID = document.getElementById("nation_ID").value;
+    var passport_NO = document.getElementById("passport_NO").value;
+    var blood_Group = document.getElementById("blood_Group").value;
+    var passExipireDate = document.getElementById("passExipireDate").value;
+    var passportPhoto = document.getElementById("passportPhoto").value;
+    var tribal = document.getElementById("tribal").value;
+    var police_clearence = document.getElementById("police_clearence").value;
+    console.log(
+        names,
+        program,
+        applicationType,
+        Gender,
+        religion,
+        nationality,
+        dob,
+        bloodGroup,
+        birth_cert,
+        photo,
+        nation_ID,
+        passport_NO,
+        blood_Group,
+        passExipireDate,
+        passportPhoto,
+        tribal,
+        police_clearence
+    );
+});
+
 step1.onclick = function () {};
 
 step2.onclick = function () {};
@@ -96,7 +136,6 @@ var passPhoto = document.getElementById("passPhoto");
 var nation_id = document.getElementById("nation_id");
 var pass_expire = document.getElementById("pass_expire");
 var local_hidden = document.getElementById("local_hidden");
-
 
 function interOnchange() {
     if (selectField.value === "International Student") {

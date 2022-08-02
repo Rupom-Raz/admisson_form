@@ -5,9 +5,8 @@
     --dark: #999999;
     --white: #ffffff;
     --black: #333333;
-    --red: #ff105f;
     --darkGreen: #001923;
-    --yellow: #ffad06;
+    --lightPurple:#bbd0ff
     --semiDark: #777777;
     --font-main: "Poppins", sans-serif;
     --font-weight-regular: 400;
@@ -16,9 +15,7 @@
 }
 /* Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-html {
-    scroll-behavior: smooth !important;
-}
+
 * {
     margin: 0;
     padding: 0;
@@ -26,9 +23,15 @@ html {
 }
 
 section {
-    height: 100vh;
     width: 100%;
-    background: var(--body);
+    height: 100vh;
+    background-image: url(../images/luimg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+}
+.img{
+    width: 35%;
 }
 
 .container {
@@ -36,13 +39,12 @@ section {
     overflow: hidden;
     width: 90%;
     padding-left: 0px !important;
-    /* margin: 1% auto; */
     padding-right: 0px !important;
-    min-height: 500px;
+    height: 500px;
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
+    border-radius: 8px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(1.5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -50,6 +52,13 @@ section {
     color: var(--white);
     text-align: center;
     font-weight: var(--font-weight-semibold);
+    text-transform: capitalize;
+
+}
+.UgProgram{
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--white);
 }
 .sub_heading {
     color: var(--white);
@@ -64,7 +73,6 @@ form {
     width: 280px;
     position: absolute;
     top: 50px;
-    left: 40px;
     transition: 0.5s;
 }
 form input {
@@ -89,7 +97,7 @@ form button {
     width: 110px;
     height: 35px;
     margin: 0 10px;
-    background: linear-gradient(to right, #ff105f, #ffad06);
+    background: linear-gradient(to right, #bbd0ff, #fff);
     border-radius: 30px;
     border: 0;
     cursor: pointer;
@@ -122,7 +130,7 @@ form button {
     cursor: pointer;
     width: 25%;
     text-align: center;
-    color: var(--white);
+    color: var(--black);
     position: relative;
 }
 .step-counter {
@@ -136,7 +144,7 @@ form button {
     position: absolute;
     height: 100%;
     width: 25%;
-    background: linear-gradient(to right, #ff105f, #ffad06);
+    background: linear-gradient(to right, #b8c0ff, #fff);
 }
 #progress::after {
     content: "";
@@ -147,5 +155,5 @@ form button {
     position: absolute;
     right: -20px;
     top: 0;
-    border-left: 20px solid var(--yellow);
+    border-left: 20px solid var(--white);
 }
