@@ -56,38 +56,34 @@ Form1.addEventListener("submit", (e) => {
     );
 });
 
-step1.onclick = function () {};
-
-step2.onclick = function () {};
-
 Next1.onclick = function () {
-    Form1.style.left = "-1200px";
+    Form1.style.left = "-4000px";
     Form2.style.left = "30px";
     progress.style.width = "50%";
 };
 Back1.onclick = function () {
     Form1.style.left = "30px";
-    Form2.style.left = "1200px";
+    Form2.style.left = "4000px";
     progress.style.width = "25%";
 };
 Next2.onclick = function () {
-    Form2.style.left = "-1200px";
+    Form2.style.left = "-4000px";
     Form3.style.left = "30px";
     progress.style.width = "75%";
 };
 Back2.onclick = function () {
     Form2.style.left = "30px";
-    Form3.style.left = "1200px";
+    Form3.style.left = "4000px";
     progress.style.width = "50%";
 };
 Next3.onclick = function () {
-    Form3.style.left = "-1200px";
+    Form3.style.left = "-4000px";
     Form4.style.left = "30px";
     progress.style.width = "100%";
 };
 Back3.onclick = function () {
     Form3.style.left = "30px";
-    Form4.style.left = "1200px";
+    Form4.style.left = "4000px";
     progress.style.width = "75%";
 };
 
