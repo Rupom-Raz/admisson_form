@@ -15,6 +15,110 @@
 }
 /* Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+.small, small {
+    font-size: 13px !important;
+}
+.error{
+    color: red;
+    font-size: 12px;
+
+}
+
+/* Responsive Queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .img{
+        margin-left: 90px;
+    }
+    .heading {
+        font-size: 15px;
+        color: var(--white);
+        text-align: center;
+        font-weight: var(--font-weight-semibold);
+        text-transform: capitalize;
+
+    }
+    .container {
+        position: relative;
+        overflow-x: hidden !important;
+        width: 90%;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        min-height: 650px !important;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .form-control-label{
+        font-size: 12px;
+    }
+    .step-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .step-row {
+
+        height: 80px !important;
+
+    }
+    #progress::after {
+        content: none !important;
+    }
+    .ssc{
+        margin-top: 30px !important;
+        font-size: 18px;
+    }
+    .hsc{
+        font-size: 18px;
+        margin-top: 0px ;
+    }
+    .form3{
+        margin-top: 55px !important;
+    }
+
+
+
+
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .img{
+        margin-left: 70px !important;
+        width: 50% !important;
+    }
+
+    .heading {
+        font-size: 15px;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .img{
+        width: 35% !important;
+
+    }
+    .heading {
+        font-size: 22px;
+
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
 
 * {
     margin: 0;
@@ -32,11 +136,14 @@ section {
 }
 .img{
     width: 35%;
+
 }
+
+
 
 .container {
     position: relative;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     width: 90%;
     padding-left: 0px !important;
     padding-right: 0px !important;
@@ -89,7 +196,7 @@ form input {
 
 .btn-box {
     width: 100%;
-    margin: 30px auto;
+    margin: 10px auto;
     text-align: center;
 }
 

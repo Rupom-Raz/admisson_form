@@ -1,88 +1,185 @@
-var Form1 = document.getElementById("form1");
-var Form2 = document.getElementById("form2");
-var Form3 = document.getElementById("form3");
-var Form4 = document.getElementById("form4");
+let Form1 = document.getElementById("form1");
+let Form2 = document.getElementById("form2");
+let Form3 = document.getElementById("form3");
+let Form4 = document.getElementById("form4");
 
-var Next1 = document.getElementById("next1");
-var Next2 = document.getElementById("next2");
-var Next3 = document.getElementById("next3");
-var Back1 = document.getElementById("back1");
-var Back2 = document.getElementById("back2");
-var Back3 = document.getElementById("back3");
-var progress = document.getElementById("progress");
+let Next1 = document.getElementById("next1");
+let Next2 = document.getElementById("next2");
+let Next3 = document.getElementById("next3");
+let Back1 = document.getElementById("back1");
+let Back2 = document.getElementById("back2");
+let Back3 = document.getElementById("back3");
+let progress = document.getElementById("progress");
 
-var step1 = document.getElementById("step1");
-var step2 = document.getElementById("step2");
-var step3 = document.getElementById("step3");
-var step4 = document.getElementById("step4");
+let step1 = document.getElementById("step1");
+let step2 = document.getElementById("step2");
+let step3 = document.getElementById("step3");
+let step4 = document.getElementById("step4");
 
+//DOB format change
+let DOB = document.getElementById("dob");
+let dateOfBirthRegex = /^(19|20)\d\d[- /.] (0[1-9]|1[012])[- /.] (0[1-9]|[12][0-9]|3[01])$/;
+if (dateOfBirthRegex.test(DOB)) {
+    console.log("true");
+} else {
+    console.log("false");
+}
+
+//Form1 Validation Check
 Form1.addEventListener("submit", (e) => {
     e.preventDefault();
-    var names = document.getElementById("name").value;
-    var program = document.getElementById("program").value;
-    var applicationType = document.getElementById("selectField").value;
-    var Gender = document.getElementById("gender").value;
-    var religion = document.getElementById("religion").value;
-    var nationality = document.getElementById("nationality").value;
-    var dob = document.getElementById("dob").value;
-    var bloodGroup = document.getElementById("bloodGroup").value;
-    var birth_cert = document.getElementById("birth_cert").value;
-    var photo = document.getElementById("photo").value;
-    var nation_ID = document.getElementById("nation_ID").value;
-    var passport_NO = document.getElementById("passport_NO").value;
-    var blood_Group = document.getElementById("blood_Group").value;
-    var passExipireDate = document.getElementById("passExipireDate").value;
-    var passportPhoto = document.getElementById("passportPhoto").value;
-    var tribal = document.getElementById("tribal").value;
-    var police_clearence = document.getElementById("police_clearence").value;
-    console.log(
-        names,
-        program,
-        applicationType,
-        Gender,
-        religion,
-        nationality,
-        dob,
-        bloodGroup,
-        birth_cert,
-        photo,
-        nation_ID,
-        passport_NO,
-        blood_Group,
-        passExipireDate,
-        passportPhoto,
-        tribal,
-        police_clearence
-    );
+    let typeErrorMsg = document.getElementById("typeError");
+    let nameErrorMsg = document.getElementById("nameError");
+    let programError = document.getElementById("programError");
+    let genderError = document.getElementById("genderError");
+    let religionError = document.getElementById("religionError");
+    let nationError = document.getElementById("nationError");
+    let photoError = document.getElementById("photoError");
+    let passNoError = document.getElementById("passNoError");
+    let passPhotoError = document.getElementById("passPhotoError");
+    let hidePhotoError = document.getElementById("hidePhotoError");
+    let mediCertError = document.getElementById("mediCertError");
+    let policeClearError = document.getElementById("policeClearError");
+    let applicationType = document.getElementById("selectField").value;
+    let names = document.getElementById("name").value;
+    let program = document.getElementById("program").value;
+    let Gender = document.getElementById("gender").value;
+    let religion = document.getElementById("religion").value;
+    let nationality = document.getElementById("nationality").value;
+    let dob = document.getElementById("dob").value;
+    let medicalCertificate =
+        document.getElementById("medicalCertificate").value;
+    let bloodGroup = document.getElementById("bloodGroup").value;
+    let birth_cert = document.getElementById("birth_cert").value;
+    let photo = document.getElementById("photo").value;
+    let hidePhoto = document.getElementById("hidePhoto").value;
+    let nation_ID = document.getElementById("nation_ID").value;
+    let passport_NO = document.getElementById("passport_NO").value;
+    let blood_Group = document.getElementById("blood_Group").value;
+    let passExipireDate = document.getElementById("passExipireDate").value;
+    let passportPhoto = document.getElementById("passportPhoto").value;
+    let tribal = document.getElementById("tribal").value;
+    let police_clearence = document.getElementById("police_clearence").value;
+
+    //Form1 regex
+    let nameRegex = /^[a-z ,.'-]+$/i;
+
+    if (applicationType === "" || applicationType == null) {
+        typeErrorMsg.innerHTML = "Please Select Type";
+    } else {
+        typeErrorMsg.innerHTML = "";
+    }
+    if (names === "" || names == null) {
+        nameErrorMsg.innerHTML = "Name is Required!";
+    } else if (!nameRegex.test(names)) {
+        nameErrorMsg.innerHTML = "Name is Not Valid";
+    } else {
+        nameErrorMsg.innerHTML = "";
+    }
+    if (program === "" || program == null) {
+        programError.innerHTML = "Program is Required!";
+    } else {
+        programError.innerHTML = "";
+    }
+    if (Gender === "" || Gender == null) {
+        genderError.innerHTML = "Gender is Required!";
+    } else {
+        genderError.innerHTML = "";
+    }
+    if (religion === "" || religion == null) {
+        religionError.innerHTML = "Gender is Required!";
+    } else {
+        religionError.innerHTML = "";
+    }
+    if (nationality === "" || nationality == null) {
+        nationError.innerHTML = "Nationality is Required!";
+    } else {
+        nationError.innerHTML = "";
+    }
+    if (dob === "" || dob == null) {
+        dobError.innerHTML = "DOB is Required!";
+    } else {
+        dobError.innerHTML = "";
+    }
+    if (photo === "" || photo == null) {
+        photoError.innerHTML = "Photo is Required!";
+    } else {
+        photoError.innerHTML = "";
+    }
+    if (hidePhoto === "" || hidePhoto == null) {
+        hidePhotoError.innerHTML = "Photo is Required!";
+    } else {
+        hidePhotoError.innerHTML = "";
+    }
+    if (passport_NO === "" || passport_NO == null) {
+        passNoError.innerHTML = "Passport NO is Required!";
+    } else {
+        passNoError.innerHTML = "";
+    }
+    if (passExipireDate === "" || passExipireDate == null) {
+        passExpireError.innerHTML = "Expire Date is Required!";
+    } else {
+        passExpireError.innerHTML = "";
+    }
+    if (passportPhoto === "" || passportPhoto == null) {
+        passPhotoError.innerHTML = "Passport Photo is Required!";
+    } else {
+        passPhotoError.innerHTML = "";
+    }
+    if (police_clearence === "" || police_clearence == null) {
+        policeClearError.innerHTML = "Clearance is Required!";
+    } else {
+        policeClearError.innerHTML = "";
+    }
+    if (medicalCertificate === "" || medicalCertificate == null) {
+        mediCertError.innerHTML = "Certificate is Required!";
+    } else {
+        mediCertError.innerHTML = "";
+    }
+
+    Next1.onclick = function () {
+        Form1.style.left = "-4000px";
+        Form2.style.left = "0px";
+        progress.style.width = "50%";
+    };
+});
+//Form 2 Validation
+Form2.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let fatherName = document.getElementById("fatherName").value;
+    let fatherNameError = document.getElementById("fatherNameError");
+
+    if (fatherName === "" || fatherName == null) {
+        fatherNameError.innerHTML = "Father name is Required!";
+    } else {
+        fatherNameError.innerHTML = "";
+    }
+
+    Next2.onclick = function () {
+        Form2.style.left = "-4000px";
+        Form3.style.left = "0px";
+        progress.style.width = "75%";
+    };
 });
 
-Next1.onclick = function () {
-    Form1.style.left = "-4000px";
-    Form2.style.left = "30px";
-    progress.style.width = "50%";
-};
 Back1.onclick = function () {
-    Form1.style.left = "30px";
+    Form1.style.left = "0px";
     Form2.style.left = "4000px";
     progress.style.width = "25%";
 };
-Next2.onclick = function () {
-    Form2.style.left = "-4000px";
-    Form3.style.left = "30px";
-    progress.style.width = "75%";
-};
+
 Back2.onclick = function () {
-    Form2.style.left = "30px";
+    Form2.style.left = "0px";
     Form3.style.left = "4000px";
     progress.style.width = "50%";
 };
 Next3.onclick = function () {
     Form3.style.left = "-4000px";
-    Form4.style.left = "30px";
+    Form4.style.left = "0px";
     progress.style.width = "100%";
 };
 Back3.onclick = function () {
-    Form3.style.left = "30px";
+    Form3.style.left = "0px";
     Form4.style.left = "4000px";
     progress.style.width = "75%";
 };
@@ -118,20 +215,20 @@ function FillAddressInput() {
 }
 
 // International Student check
-var selectField = document.getElementById("selectField");
-var bloodGroup = document.getElementById("bloodGroup");
-var photo = document.getElementById("photo");
-var hideBloodGr = document.getElementById("hideBloodGr");
-var birth_cert = document.getElementById("birth_cert");
-var medicalCert = document.getElementById("medicalCert");
-var tribal = document.getElementById("tribal");
-var passNoSpan = document.getElementById("passNoSpan");
-var hidePhoto = document.getElementById("hidePhoto");
-var policeClearance = document.getElementById("policeClearance");
-var passPhoto = document.getElementById("passPhoto");
-var nation_id = document.getElementById("nation_id");
-var pass_expire = document.getElementById("pass_expire");
-var local_hidden = document.getElementById("local_hidden");
+let selectField = document.getElementById("selectField");
+let bloodGroup = document.getElementById("bloodGroup");
+let photo = document.getElementById("photo");
+let hideBloodGr = document.getElementById("hideBloodGr");
+let birth_cert = document.getElementById("birth_cert");
+let medicalCert = document.getElementById("medicalCert");
+let tribal = document.getElementById("tribal");
+let passNoSpan = document.getElementById("passNoSpan");
+let hidePhoto = document.getElementById("hidePhoto");
+let policeClearance = document.getElementById("policeClearance");
+let passPhoto = document.getElementById("passPhoto");
+let nation_id = document.getElementById("nation_id");
+let pass_expire = document.getElementById("pass_expire");
+let local_hidden = document.getElementById("local_hidden");
 
 function interOnchange() {
     if (selectField.value === "International Student") {
