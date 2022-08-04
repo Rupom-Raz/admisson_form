@@ -32,7 +32,7 @@
                                 <label class="form-control-label  ">Application Type<span class="text-danger">
                                         *</span></label>
                                 <select id="selectField" class="form-select ">
-                                    <option value="">Select Type</option>
+
                                     <option value="Local Student(Bangladeshi)">Local Student(Bangladeshi)</option>
                                     <option value="International Student">International Student </option>
                                 </select>
@@ -117,7 +117,8 @@
                             <div id="photo" class="form-group col-6 col-md-3  flex-column interStudent ">
                                 <label class="form-control-label ">Photo<span class="text-danger">
                                         *</span></label>
-                                <input type="file" id="photo" name="">
+                                <input onchange="fileValidation(this)" type="file" id="photoID"
+                                    accept=".jpg,.png,.gif,.jpeg">
                                 <div id="photoError" class="error"></div>
                             </div>
                             <div id="nation_id" class="form-group col-6 col-md-3  flex-column">
@@ -129,7 +130,7 @@
                                         style="visibility: hidden;">
                                         *</span></label>
                                 <input type="text" id="passport_NO" name="" placeholder="Passport NO">
-                                <div id="passNoError" class="error"></div>
+                                <div style="visibility: hidden" id="passNoError" class="error"></div>
                             </div>
                             <div id="hideBloodGr" class="form-group col-6 col-md-3 flex-column ">
                                 <label class="form-control-label ">Blood Group</label>
@@ -176,7 +177,8 @@
                             <div id="hidePhoto" class="form-group col-6 col-md-3  flex-column">
                                 <label class="form-control-label ">Photo<span class="text-danger">
                                         *</span></label>
-                                <input type="file" id="" name="">
+                                <input onchange="fileValidation(this)" type="file" id="hidePhotoID" name=""
+                                    accept=".jpg,.png,.gif,.jpeg">
                                 <div id="hidePhotoError" class="error"></div>
                             </div>
                             <div class="form-group col-6 col-md-3 flex-column d-flex">
@@ -204,7 +206,8 @@
                             <div class="form-group col-6 col-md-3 flex-column d-flex">
                                 <label class="form-control-label ">Father Occupation<span class="text-danger">
                                         *</span></label>
-                                <input type="text" id="lname" name="lname" placeholder="Father Occupation">
+                                <input type="text" id="fatherOccupation" name="lname" placeholder="Father Occupation">
+                                <div id="fatherOccupationError" class="error"></div>
                             </div>
                             <div class="form-group col-6 col-md-3 flex-column d-flex">
                                 <label class="form-control-label ">Father National ID</label>
@@ -213,14 +216,16 @@
                             <div class="form-group col-6 col-md-3 flex-column d-flex">
                                 <label class="form-control-label ">Mother Name<span class="text-danger">
                                         *</span></label>
-                                <input type="text" id="lname" name="lname" placeholder="Mother Name">
+                                <input type="text" id="motherName" name="lname" placeholder="Mother Name">
+                                <div id="motherNameError" class="error"></div>
                             </div>
                         </div>
                         <div class="row   mt-3">
                             <div class="form-group col-6 col-md-3 flex-column d-flex">
                                 <label class="form-control-label ">Mother Occupation<span class="text-danger">
                                         *</span></label>
-                                <input type="text" id="lname" name="lname" placeholder="Mother Occupation">
+                                <input type="text" id="motherOccupation" name="lname" placeholder="Mother Occupation">
+                                <div id="motherOccupationError" class="error"></div>
                             </div>
                             <div class="form-group col-6 col-md-3 flex-column d-flex">
                                 <label class="form-control-label ">Mother National ID</label>
@@ -229,19 +234,24 @@
                             <div class="form-group col-6 col-md-3  flex-column">
                                 <label class="form-control-label ">Guardian Photo<span class="text-danger">
                                         *</span></label>
-                                <input type="file" id="" name="">
+                                <input onchange="guardianPhotoHandle(this)" type="file" id="guardianPhoto"
+                                    accept=".jpg,.png,.jpeg">
+                                <div id="guardianPhotoError" class="error"></div>
                             </div>
                             <div class="form-group col-6 col-md-3 flex-column d-flex">
                                 <label class="form-control-label ">Local Guardian Name<span class="text-danger">
                                         *</span></label>
-                                <input type="text" id="lname" name="lname" placeholder="Local Guardian Name">
+                                <input type="text" id="localGuardianName" name="lname"
+                                    placeholder="Local Guardian Name">
+                                <div id="localGuardianNameError" class="error"></div>
                             </div>
                         </div>
                         <div class="row ">
                             <div class="form-group col-6 col-md-3  flex-column">
                                 <label class="form-control-label ">Local Guardian Address<span class="text-danger">
                                         *</span></label>
-                                <input type="text" id="" name="" placeholder="National ID">
+                                <input type="text" id="localGuardianAddress" name="" placeholder="National ID">
+                                <div id="localGuardianAddressError" class="error"></div>
                             </div>
                         </div>
                         <div class="btn-box">
@@ -250,27 +260,31 @@
                         </div>
                     </form>
                     <!-- Form ----------3----------- -->
-                    <form id="form3">
+                    <form id="form3" method="post" action="/">
                         <div class="row form3">
                             <div class="form-group col-6 col-md-3  flex-column">
                                 <label class="form-control-label ">Email<span class="text-danger">
                                         *</span></label>
-                                <input type="email" id="" name="" placeholder="Enter Your Email">
+                                <input type="text" id="email" name="email" placeholder="Enter Your Email">
+                                <div id="emailError" class="error"></div>
                             </div>
                             <div class="form-group col-6 col-md-3 flex-column d-flex">
                                 <label class="form-control-label ">Mobile<span class="text-danger">
                                         *</span></label>
-                                <input type="number" id="" name="" placeholder="Enter Your Mobile Number">
+                                <input type="number" id="mobileNO" name="" placeholder="Enter Your Mobile Number">
+                                <div id="mobileNOError" class="error"></div>
                             </div>
                             <div class="form-group col-6 col-md-3 flex-column d-flex">
                                 <label class="form-control-label ">Guardian Mobile NO<span class="text-danger">
                                         *</span></label>
-                                <input type="number" id="" name="" placeholder="Guardian NO">
+                                <input type="number" id="guardianNO" name="" placeholder="Guardian NO">
+                                <div id="guardianNOError" class="error"></div>
                             </div>
                             <div class="form-group col-6 col-md-3 flex-column d-flex">
                                 <label class="form-control-label ">Local Guardian NO<span class="text-danger">
                                         *</span></label>
-                                <input type="number" id="" name="" placeholder="Local Guardian NO">
+                                <input type="number" id="localGuardianNO" name="" placeholder="Local Guardian NO">
+                                <div id="localGuardianNOError" class="error"></div>
                             </div>
                         </div>
                         <div class="row mt-3">
@@ -284,6 +298,7 @@
                                     <option value="Chittagong">Chittagong</option>
                                     <option value="Rajshahi">Rajshahi</option>
                                 </select>
+                                <div id="pre_DivisionError" class="error"></div>
                             </div>
                             <div class="form-group col-6 col-md-3 flex-column d-flex">
                                 <label class="form-control-label ">District<span class="text-danger">
@@ -294,21 +309,24 @@
                                     <option value="Cumilla">Cumilla</option>
                                     <option value="Rajshahi Dis">Rajshahi Dis</option>
                                 </select>
+                                <div id="pre_DistrictError" class="error"></div>
                             </div>
                             <div class="form-group col-6 col-md-3 flex-column d-flex">
                                 <label class="form-control-label ">City<span class="text-danger">
                                         *</span></label>
                                 <select id="pre_City" class="form-select">
-                                    <option value="Select City">Select City</option>
+                                    <option value="">Select City</option>
                                     <option value="Cumilla city">Cumilla city</option>
                                     <option value="Dhaka city">Dhaka city</option>
                                     <option value="Rajshahi City">Rajshahi City</option>
                                 </select>
+                                <div id="pre_CityError" class="error"></div>
                             </div>
                             <div class="form-group col-6 col-md-3 flex-column d-flex">
                                 <label class="form-control-label ">Postal Code<span class="text-danger">
                                         *</span></label>
                                 <input type="number" id="pre_Postal" name="" placeholder="Postal Code">
+                                <div id="pre_PostalError" class="error"></div>
                             </div>
                         </div>
                         <div class="row mt-3">
@@ -355,7 +373,7 @@
                         </div>
                         <div class="btn-box">
                             <button id="back2" type="button">Back</button>
-                            <button id="next3" type="button">Next</button>
+                            <button id="next3" type="submit">Next</button>
                         </div>
                     </form>
                     <!-- Form --------4 --------------- -->
@@ -509,6 +527,68 @@
         </div>
     </section>
 </body>
+
+<script type="text/javascript">
+    //Form 1 photo file size validation
+    function fileValidation(input) {
+        let photo = document.getElementById("photoID").value;
+        let hidePhoto = document.getElementById("hidePhotoID");
+        let hidePhotoError = document.getElementById("hidePhotoError")
+        let photoError = document.getElementById("photoError")
+        let fileSize = input.files[0].size / 1000;
+
+        if (fileSize > 100) {
+            hidePhotoError.innerHTML = "File size exceeds 100 KB "
+            photoError.innerHTML = "File size exceeds 100 KB"
+        } else if (fileSize <= 100) {
+
+            hidePhotoError.innerHTML = ""
+            photoError.innerHTML = ""
+        }
+
+
+        else if (photo === "" || photo == null) {
+            photoError.innerHTML = "Photo is Required!"
+
+        } else if (hidePhoto === "" || hidePhoto == null) {
+            hidePhotoError.innerHTML = "Photo is Required!"
+
+
+        }
+        else {
+            hidePhotoError.innerHTML = ""
+            photoError.innerHTML = ""
+        }
+    }
+
+    //Form 2 Guardian photo validation
+    function guardianPhotoHandle(input) {
+        let guardianPhoto = document.getElementById("guardianPhoto").value;
+        let guardianPhotoError = document.getElementById("guardianPhotoError")
+        let fileSize = input.files[0].size / 1000;
+
+        if (fileSize > 100) {
+            guardianPhotoError.innerHTML = "File size exceeds 100 KB"
+        } else if (fileSize <= 100) {
+            guardianPhotoError.innerHTML = ""
+        }
+
+
+        else if (guardianPhoto === "" || guardianPhoto == null) {
+            guardianPhotoError.innerHTML = "Photo is Required!"
+
+        }
+        else {
+            guardianPhotoError.innerHTML = ""
+        }
+
+    }
+
+
+
+
+
+</script>
 
 <script type="text/javascript" src="./JS/main.js"></script>
 <!-- Validation package -->

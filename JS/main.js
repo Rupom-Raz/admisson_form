@@ -17,13 +17,13 @@ let step3 = document.getElementById("step3");
 let step4 = document.getElementById("step4");
 
 //DOB format change
-let DOB = document.getElementById("dob");
-let dateOfBirthRegex = /^(19|20)\d\d[- /.] (0[1-9]|1[012])[- /.] (0[1-9]|[12][0-9]|3[01])$/;
-if (dateOfBirthRegex.test(DOB)) {
-    console.log("true");
-} else {
-    console.log("false");
-}
+// let DOB = document.getElementById("dob");
+// let dateOfBirthRegex = /^(19|20)\d\d[- /.] (0[1-9]|1[012])[- /.] (0[1-9]|[12][0-9]|3[01])$/;
+// if (dateOfBirthRegex.test(DOB)) {
+//     console.log("true");
+// } else {
+//     console.log("false");
+// }
 
 //Form1 Validation Check
 Form1.addEventListener("submit", (e) => {
@@ -51,8 +51,8 @@ Form1.addEventListener("submit", (e) => {
         document.getElementById("medicalCertificate").value;
     let bloodGroup = document.getElementById("bloodGroup").value;
     let birth_cert = document.getElementById("birth_cert").value;
-    let photo = document.getElementById("photo").value;
-    let hidePhoto = document.getElementById("hidePhoto").value;
+    let photo = document.getElementById("photoID").value;
+    let hidePhoto = document.getElementById("hidePhotoID").value;
     let nation_ID = document.getElementById("nation_ID").value;
     let passport_NO = document.getElementById("passport_NO").value;
     let blood_Group = document.getElementById("blood_Group").value;
@@ -70,34 +70,34 @@ Form1.addEventListener("submit", (e) => {
         typeErrorMsg.innerHTML = "";
     }
     if (names === "" || names == null) {
-        nameErrorMsg.innerHTML = "Name is Required!";
+        nameErrorMsg.innerHTML = "Field is Required!";
     } else if (!nameRegex.test(names)) {
         nameErrorMsg.innerHTML = "Name is Not Valid";
     } else {
         nameErrorMsg.innerHTML = "";
     }
     if (program === "" || program == null) {
-        programError.innerHTML = "Program is Required!";
+        programError.innerHTML = "Field is Required!";
     } else {
         programError.innerHTML = "";
     }
     if (Gender === "" || Gender == null) {
-        genderError.innerHTML = "Gender is Required!";
+        genderError.innerHTML = "Field is Required!";
     } else {
         genderError.innerHTML = "";
     }
     if (religion === "" || religion == null) {
-        religionError.innerHTML = "Gender is Required!";
+        religionError.innerHTML = "Field is Required!";
     } else {
         religionError.innerHTML = "";
     }
     if (nationality === "" || nationality == null) {
-        nationError.innerHTML = "Nationality is Required!";
+        nationError.innerHTML = "Field is Required!";
     } else {
         nationError.innerHTML = "";
     }
     if (dob === "" || dob == null) {
-        dobError.innerHTML = "DOB is Required!";
+        dobError.innerHTML = "Filed is Required!";
     } else {
         dobError.innerHTML = "";
     }
@@ -146,19 +146,170 @@ Form1.addEventListener("submit", (e) => {
 //Form 2 Validation
 Form2.addEventListener("submit", (e) => {
     e.preventDefault();
+    //Ragex
+    let nameRegex = /^[a-z ,.'-]+$/i;
     let fatherName = document.getElementById("fatherName").value;
+    let fatherOccupation = document.getElementById("fatherOccupation").value;
     let fatherNameError = document.getElementById("fatherNameError");
+    let fatherOccupationError = document.getElementById(
+        "fatherOccupationError"
+    );
+    let motherName = document.getElementById("motherName").value;
+    let motherNameError = document.getElementById("motherNameError");
+    let motherOccupation = document.getElementById("motherOccupation").value;
+    let motherOccupationError = document.getElementById(
+        "motherOccupationError"
+    );
+
+    let guardianPhoto = document.getElementById("guardianPhoto").value;
+    let guardianPhotoError = document.getElementById("guardianPhotoError");
+    let localGuardianName = document.getElementById("localGuardianName").value;
+    let localGuardianAddress = document.getElementById(
+        "localGuardianAddress"
+    ).value;
+    let localGuardianNameError = document.getElementById(
+        "localGuardianNameError"
+    );
+    let localGuardianAddressError = document.getElementById(
+        "localGuardianAddressError"
+    );
 
     if (fatherName === "" || fatherName == null) {
-        fatherNameError.innerHTML = "Father name is Required!";
+        fatherNameError.innerHTML = "Field is Required!";
+    } else if (!nameRegex.test(fatherName)) {
+        fatherNameError.innerHTML = "Name is Not Valid!";
     } else {
         fatherNameError.innerHTML = "";
+    }
+    if (fatherOccupation === "" || fatherOccupation == null) {
+        fatherOccupationError.innerHTML = "Field is Required!";
+    } else {
+        fatherNameError.innerHTML = "";
+    }
+    if (motherName === "" || motherName == null) {
+        motherNameError.innerHTML = "Field is Required!";
+    } else if (!nameRegex.test(motherName)) {
+        motherNameError.innerHTML = "Name is Not Valid!";
+    } else {
+        motherNameError.innerHTML = "";
+    }
+
+    if (motherOccupation === "" || motherOccupation == null) {
+        motherOccupationError.innerHTML = "Field is Required!";
+    } else {
+        motherOccupationError.innerHTML = "";
+    }
+
+    if (guardianPhoto === "" || guardianPhoto == null) {
+        guardianPhotoError.innerHTML = "Photo is Required!";
+    } else {
+        guardianPhotoError.innerHTML = "";
+    }
+
+    if (localGuardianName === "" || localGuardianName == null) {
+        localGuardianNameError.innerHTML = "Field is Required!";
+    } else if (!nameRegex.test(localGuardianName)) {
+        localGuardianNameError.innerHTML = "Name is Not Valid!";
+    } else {
+        localGuardianNameError.innerHTML = "";
+    }
+    if (localGuardianAddress === "" || localGuardianAddress == null) {
+        localGuardianAddressError.innerHTML = "Field is Required!";
+    } else {
+        localGuardianAddressError.innerHTML = "";
     }
 
     Next2.onclick = function () {
         Form2.style.left = "-4000px";
         Form3.style.left = "0px";
         progress.style.width = "75%";
+    };
+});
+
+Form3.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    let mobileNORegex =
+        /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/;
+    let email = document.getElementById("email").value;
+    let mobileNO = document.getElementById("mobileNO").value;
+    let guardianNO = document.getElementById("guardianNO").value;
+    let localGuardianNO = document.getElementById("localGuardianNO").value;
+    let pre_Division = document.getElementById("pre_Division").value;
+    let pre_District = document.getElementById("pre_District").value;
+    let pre_City = document.getElementById("pre_City").value;
+    let pre_Postal = document.getElementById("pre_Postal").value;
+
+
+    let emailError = document.getElementById("emailError");
+    let mobileNOError = document.getElementById("mobileNOError");
+    let guardianNOError = document.getElementById("guardianNOError");
+    let localGuardianNOError = document.getElementById("localGuardianNOError");
+    let pre_DivisionError = document.getElementById("pre_DivisionError");
+    let pre_DistrictError = document.getElementById("pre_DistrictError");
+    let pre_CityError = document.getElementById("pre_CityError");
+    let pre_PostalError = document.getElementById("pre_PostalError");
+    if (email === "" || email == null) {
+        emailError.innerHTML = "Email is Required!";
+    } else if (!emailRegex.test(email)) {
+        emailError.innerHTML = "Email is Not Valid";
+    } else {
+        emailError.innerHTML = "";
+    }
+
+    if (mobileNO === "" || mobileNO == null) {
+        mobileNOError.innerHTML = "Mobile NO is Required!";
+    } else if (!mobileNORegex.test(mobileNO)) {
+        mobileNOError.innerHTML = "Mobile NO is Not Valid!";
+    } else {
+        mobileNOError.innerHTML = "";
+    }
+
+    if (guardianNO === "" || guardianNO == null) {
+        guardianNOError.innerHTML = "Mobile NO is Required!";
+    } else if (!mobileNORegex.test(guardianNO)) {
+        guardianNOError.innerHTML = "Mobile NO is Not Valid!";
+    } else {
+        guardianNOError.innerHTML = "";
+    }
+    if (localGuardianNO === "" || localGuardianNO == null) {
+        localGuardianNOError.innerHTML = "Mobile NO is Required!";
+    } else if (!mobileNORegex.test(localGuardianNO)) {
+        localGuardianNOError.innerHTML = "Mobile NO is Not Valid!";
+    } else {
+        localGuardianNOError.innerHTML = "";
+    }
+
+    if (pre_Division === "" || pre_Division == null) {
+        pre_DivisionError.innerHTML = "Filed is Required!";
+    } else {
+        pre_DivisionError.innerHTML = "";
+    }
+    if (pre_District === "" || pre_District == null) {
+        pre_DistrictError.innerHTML = "Filed is Required!";
+    } else {
+        pre_DistrictError.innerHTML = "";
+    }
+    if (pre_District === "" || pre_District == null) {
+        pre_DistrictError.innerHTML = "Filed is Required!";
+    } else {
+        pre_DistrictError.innerHTML = "";
+    }
+    if (pre_City === "" || pre_City == null) {
+        pre_CityError.innerHTML = "Filed is Required!";
+    } else {
+        pre_CityError.innerHTML = "";
+    }
+    if (pre_Postal === "" || pre_Postal == null) {
+        pre_PostalError.innerHTML = "Filed is Required!";
+    } else {
+        pre_PostalError.innerHTML = "";
+    }
+
+    Next3.onclick = function () {
+        Form3.style.left = "-4000px";
+        Form4.style.left = "0px";
+        progress.style.width = "100%";
     };
 });
 
@@ -173,11 +324,7 @@ Back2.onclick = function () {
     Form3.style.left = "4000px";
     progress.style.width = "50%";
 };
-Next3.onclick = function () {
-    Form3.style.left = "-4000px";
-    Form4.style.left = "0px";
-    progress.style.width = "100%";
-};
+
 Back3.onclick = function () {
     Form3.style.left = "0px";
     Form4.style.left = "4000px";
@@ -223,6 +370,7 @@ let birth_cert = document.getElementById("birth_cert");
 let medicalCert = document.getElementById("medicalCert");
 let tribal = document.getElementById("tribal");
 let passNoSpan = document.getElementById("passNoSpan");
+let passNoError = document.getElementById("passNoError");
 let hidePhoto = document.getElementById("hidePhoto");
 let policeClearance = document.getElementById("policeClearance");
 let passPhoto = document.getElementById("passPhoto");
@@ -244,9 +392,11 @@ function interOnchange() {
         hidePhoto.style.display = "none";
         nation_id.style.display = "none";
         passNoSpan.style.visibility = "visible";
+        passNoError.style.visibility = "visible";
     } else if (selectField.value === "Local Student(Bangladeshi)") {
         bloodGroup.style.display = "none";
         photo.style.display = "none";
+        passNoSpan.style.visibility = "none";
         passPhoto.style.display = "none";
         policeClearance.style.display = "none";
         medicalCert.style.display = "none";
