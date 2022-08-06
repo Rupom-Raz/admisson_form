@@ -6,7 +6,7 @@
     --white: #ffffff;
     --black: #333333;
     --darkGreen: #001923;
-    --lightPurple:#bbd0ff
+    --lightPurple: #bbd0ff;
     --semiDark: #777777;
     --font-main: "Poppins", sans-serif;
     --font-weight-regular: 400;
@@ -15,21 +15,20 @@
 }
 /* Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-.small, small {
+.small,
+small {
     font-size: 13px !important;
 }
-.error{
+.error {
     color: red;
     font-size: 12px;
-
 }
 
 /* Responsive Queries */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
-    .img{
+    .img {
         margin-left: 90px;
     }
     .heading {
@@ -38,7 +37,6 @@
         text-align: center;
         font-weight: var(--font-weight-semibold);
         text-transform: capitalize;
-
     }
     .container {
         position: relative;
@@ -46,7 +44,7 @@
         width: 90%;
         padding-left: 0px !important;
         padding-right: 0px !important;
-        min-height: 650px !important;
+        min-height: 550px !important;
         background: rgba(255, 255, 255, 0.2);
         border-radius: 8px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -55,7 +53,7 @@
         border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
-    .form-control-label{
+    .form-control-label {
         font-size: 12px;
     }
     .step-col {
@@ -65,36 +63,27 @@
         justify-content: center;
     }
     .step-row {
-
         height: 80px !important;
-
     }
     #progress::after {
         content: none !important;
     }
-    .ssc{
+    .ssc {
         margin-top: 30px !important;
         font-size: 18px;
     }
-    .hsc{
+    .hsc {
         font-size: 18px;
-        margin-top: 0px ;
+        margin-top: 0px;
     }
-    .form3{
+    .form3 {
         margin-top: 55px !important;
     }
-
-
-
-
 }
-
-
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
-    .img{
+    .img {
         margin-left: 70px !important;
         width: 50% !important;
     }
@@ -102,23 +91,21 @@
     .heading {
         font-size: 15px;
     }
-
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .img{
+    .img {
         width: 35% !important;
-
     }
     .heading {
         font-size: 22px;
-
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+}
 
 * {
     margin: 0;
@@ -133,14 +120,10 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: contain;
-
 }
-.img{
+.img {
     width: 35%;
-
 }
-
-
 
 .container {
     position: relative;
@@ -161,9 +144,8 @@ section {
     text-align: center;
     font-weight: var(--font-weight-semibold);
     text-transform: capitalize;
-
 }
-.UgProgram{
+.UgProgram {
     text-align: center;
     text-transform: capitalize;
     color: var(--white);
