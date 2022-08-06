@@ -50,7 +50,8 @@ Form1.addEventListener("submit", (e) => {
     let medicalCertificate =
         document.getElementById("medicalCertificate").value;
     let bloodGroup = document.getElementById("bloodGroup").value;
-    let birth_cert = document.getElementById("birth_cert").value;
+    let birth_cert = document.getElementById("birth_certificate").value;
+    let tribalValue = document.getElementById("tribalValue").value;
     let photo = document.getElementById("photoID").value;
     let hidePhoto = document.getElementById("hidePhotoID").value;
     let nation_ID = document.getElementById("nation_ID").value;
@@ -137,11 +138,19 @@ Form1.addEventListener("submit", (e) => {
         mediCertError.innerHTML = "";
     }
 
-    Next1.onclick = function () {
-        Form1.style.left = "-4000px";
-        Form2.style.left = "0px";
-        progress.style.width = "50%";
-    };
+    if (hidePhoto === "" || hidePhoto == null) {
+        Next1.onclick = function () {
+            Form1.style.left = "";
+            Form2.style.left = "";
+            progress.style.width = "";
+        };
+    } else {
+        Next1.onclick = function () {
+            Form1.style.left = "-4000px";
+            Form2.style.left = "0px";
+            progress.style.width = "50%";
+        };
+    }
 });
 //Form 2 Validation
 Form2.addEventListener("submit", (e) => {
@@ -219,11 +228,19 @@ Form2.addEventListener("submit", (e) => {
         localGuardianAddressError.innerHTML = "";
     }
 
-    Next2.onclick = function () {
-        Form2.style.left = "-4000px";
-        Form3.style.left = "0px";
-        progress.style.width = "75%";
-    };
+    if (localGuardianAddress === "" || localGuardianAddress == null) {
+        Next2.onclick = function () {
+            Form2.style.left = "0px";
+            Form3.style.left = "";
+            progress.style.width = "";
+        };
+    } else {
+        Next2.onclick = function () {
+            Form2.style.left = "-4000px";
+            Form3.style.left = "0px";
+            progress.style.width = "75%";
+        };
+    }
 });
 
 Form3.addEventListener("submit", (e) => {
@@ -239,7 +256,10 @@ Form3.addEventListener("submit", (e) => {
     let pre_District = document.getElementById("pre_District").value;
     let pre_City = document.getElementById("pre_City").value;
     let pre_Postal = document.getElementById("pre_Postal").value;
-
+    let par_Division = document.getElementById("par_Division").value;
+    let par_District = document.getElementById("par_District").value;
+    let par_City = document.getElementById("par_City").value;
+    let par_Postal = document.getElementById("par_Postal").value;
 
     let emailError = document.getElementById("emailError");
     let mobileNOError = document.getElementById("mobileNOError");
@@ -249,6 +269,10 @@ Form3.addEventListener("submit", (e) => {
     let pre_DistrictError = document.getElementById("pre_DistrictError");
     let pre_CityError = document.getElementById("pre_CityError");
     let pre_PostalError = document.getElementById("pre_PostalError");
+    let par_DivisionError = document.getElementById("par_DivisionError");
+    let par_DistrictError = document.getElementById("par_DistrictError");
+    let par_CityError = document.getElementById("par_CityError");
+    let par_PostalError = document.getElementById("par_PostalError");
     if (email === "" || email == null) {
         emailError.innerHTML = "Email is Required!";
     } else if (!emailRegex.test(email)) {
@@ -305,12 +329,174 @@ Form3.addEventListener("submit", (e) => {
     } else {
         pre_PostalError.innerHTML = "";
     }
+    if (par_Division === "" || par_Division == null) {
+        par_DivisionError.innerHTML = "Filed is Required!";
+    } else {
+        par_DivisionError.innerHTML = "";
+    }
+    if (par_District === "" || par_District == null) {
+        par_DistrictError.innerHTML = "Filed is Required!";
+    } else {
+        par_DistrictError.innerHTML = "";
+    }
+    if (par_City === "" || par_City == null) {
+        par_CityError.innerHTML = "Filed is Required!";
+    } else {
+        par_CityError.innerHTML = "";
+    }
+    if (par_Postal === "" || par_Postal == null) {
+        par_PostalError.innerHTML = "Filed is Required!";
+    } else {
+        par_PostalError.innerHTML = "";
+    }
 
-    Next3.onclick = function () {
-        Form3.style.left = "-4000px";
-        Form4.style.left = "0px";
-        progress.style.width = "100%";
-    };
+    if (par_Postal === "" || par_Postal == null) {
+        Next3.onclick = function () {
+            Form3.style.left = "0px";
+            Form4.style.left = "";
+            progress.style.width = "";
+        };
+    } else {
+        Next3.onclick = function () {
+            Form3.style.left = "-4000px";
+            Form4.style.left = "0px";
+            progress.style.width = "100%";
+        };
+    }
+});
+
+Form4.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let exam = document.getElementById("exam").value;
+    let year = document.getElementById("year").value;
+    let board = document.getElementById("board").value;
+    let instituateName = document.getElementById("instituateName").value;
+    let group = document.getElementById("group").value;
+    let roll = document.getElementById("roll").value;
+    let regNO = document.getElementById("regNO").value;
+    let gpa = document.getElementById("gpa").value;
+    let hscExam = document.getElementById("hscExam").value;
+    let hscYear = document.getElementById("hscYear").value;
+    let hscBoard = document.getElementById("hscBoard").value;
+    let hscInstituteName = document.getElementById("hscInstituteName").value;
+    let hscGroup = document.getElementById("hscGroup").value;
+    let hscRoll = document.getElementById("hscRoll").value;
+    let hscRegNO = document.getElementById("hscRegNO").value;
+    let hscGpa = document.getElementById("hscGpa").value;
+    let examError = document.getElementById("examError");
+    let yearError = document.getElementById("yearError");
+    let boardError = document.getElementById("boardError");
+    let instituateNameError = document.getElementById("instituateNameError");
+    let groupError = document.getElementById("groupError");
+    let rollError = document.getElementById("rollError");
+    let regNOError = document.getElementById("regNOError");
+    let gpaError = document.getElementById("gpaError");
+    let hscExamError = document.getElementById("hscExamError");
+    let hscYearError = document.getElementById("hscYearError");
+    let hscBoardError = document.getElementById("hscBoardError");
+    let hscInstituteNameError = document.getElementById(
+        "hscInstituteNameError"
+    );
+    let hscGroupError = document.getElementById("hscGroupError");
+    let hscRollError = document.getElementById("hscRollError");
+    let hscRegNOError = document.getElementById("hscRegNOError");
+    let hscGpaError = document.getElementById("hscGpaError");
+
+    if (exam === "" || exam == null) {
+        examError.innerHTML = "Field is Required!";
+    } else {
+        examError.innerHTML = "";
+    }
+    if (year === "" || year == null) {
+        yearError.innerHTML = "Field is Required!";
+    } else {
+        yearError.innerHTML = "";
+    }
+    if (board === "" || board == null) {
+        boardError.innerHTML = "Field is Required!";
+    } else {
+        boardError.innerHTML = "";
+    }
+    if (instituateName === "" || instituateName == null) {
+        instituateNameError.innerHTML = "Field is Required!";
+    } else {
+        instituateNameError.innerHTML = "";
+    }
+    if (instituateName === "" || instituateName == null) {
+        instituateNameError.innerHTML = "Field is Required!";
+    } else {
+        instituateNameError.innerHTML = "";
+    }
+    if (group === "" || group == null) {
+        groupError.innerHTML = "Field is Required!";
+    } else {
+        groupError.innerHTML = "";
+    }
+    if (roll === "" || roll == null) {
+        rollError.innerHTML = "Field is Required!";
+    } else {
+        rollError.innerHTML = "";
+    }
+    if (roll === "" || roll == null) {
+        rollError.innerHTML = "Field is Required!";
+    } else {
+        rollError.innerHTML = "";
+    }
+    if (regNO === "" || regNO == null) {
+        regNOError.innerHTML = "Field is Required!";
+    } else {
+        regNOError.innerHTML = "";
+    }
+    if (gpa === "" || gpa == null) {
+        gpaError.innerHTML = "Field is Required!";
+    } else {
+        gpaError.innerHTML = "";
+    }
+    if (hscExam === "" || hscExam == null) {
+        hscExamError.innerHTML = "Field is Required!";
+    } else {
+        hscExamError.innerHTML = "";
+    }
+    if (hscYear === "" || hscYear == null) {
+        hscYearError.innerHTML = "Field is Required!";
+    } else {
+        hscYearError.innerHTML = "";
+    }
+    if (hscBoard === "" || hscBoard == null) {
+        hscBoardError.innerHTML = "Field is Required!";
+    } else {
+        hscBoardError.innerHTML = "";
+    }
+    if (hscInstituteName === "" || hscInstituteName == null) {
+        hscInstituteNameError.innerHTML = "Field is Required!";
+    } else {
+        hscInstituteNameError.innerHTML = "";
+    }
+    if (hscGroup === "" || hscGroup == null) {
+        hscGroupError.innerHTML = "Field is Required!";
+    } else {
+        hscGroupError.innerHTML = "";
+    }
+    if (hscRoll === "" || hscRoll == null) {
+        hscRollError.innerHTML = "Field is Required!";
+    } else {
+        hscRollError.innerHTML = "";
+    }
+    if (hscRegNO === "" || hscRegNO == null) {
+        hscRegNOError.innerHTML = "Field is Required!";
+    } else {
+        hscRegNOError.innerHTML = "";
+    }
+    if (hscGpa === "" || hscGpa == null) {
+        hscGpaError.innerHTML = "Field is Required!";
+    } else {
+        hscGpaError.innerHTML = "";
+    }
+
+    if (hscGpa === "" || hscGpa == null) {
+    } else {
+        window.location.pathname = "success.html";
+    }
 });
 
 Back1.onclick = function () {
